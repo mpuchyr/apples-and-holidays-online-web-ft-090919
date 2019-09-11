@@ -76,6 +76,7 @@ def all_supplies_in_holidays(holiday_hash)
         new_years_holiday.each do |word|
           word.capitalize!
         end
+        new_years_holiday = new_years_holiday.join(' ')
         
       end
     end
