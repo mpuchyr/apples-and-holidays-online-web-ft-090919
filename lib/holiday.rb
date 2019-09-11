@@ -79,7 +79,7 @@ def all_supplies_in_holidays(holiday_hash)
         new_years_holiday = new_years_holiday.join(' ')
         puts "  #{new_years_holiday}: #{supplies.join(', ')}"
       else
-        
+        puts "  #{holiday.to_s.capitalize}: #{supplies.join(', ')}"
       end
     end
   end
