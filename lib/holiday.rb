@@ -71,12 +71,12 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holidays|
     puts "#{season.to_s.capitalize!}:"
     holidays.each do |holiday, supplies|
-      if holiday == :new_years
-        new_years_holiday = holiday.to_s.split('_')
-        new_years_holiday.each do |word|
+      if holiday.to_s.include?("_")
+        changed_holiday = holiday.to_s.split('_')
+        changed_holiday.each do |word|
           word.capitalize!
         end
-        new_years_holiday = new_years_holiday.join(' ')
+        changed_holiday = changed_holiday.join(' ')
         puts "  #{new_years_holiday}: #{supplies.join(', ')}"
       else
         puts "  #{holiday.to_s.capitalize}: #{supplies.join(', ')}"
